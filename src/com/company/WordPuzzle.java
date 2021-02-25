@@ -33,15 +33,11 @@ public class WordPuzzle {
         boolean blackAbove = blackBoxes[r-1][c];
         boolean blackLeft = blackBoxes[r][c-1];
 
-        if(blackAbove){
+        if(blackAbove || blackLeft){
             return true;
         }
-        if(blackLeft){
-            return true;
-        }
-        else{
-            return false;
-        }
+        return false;
+
     }
 
     /* Write the WordPuzzle Constructor.  The constructor should initialize the
